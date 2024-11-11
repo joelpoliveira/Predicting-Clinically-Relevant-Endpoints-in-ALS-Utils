@@ -44,7 +44,7 @@ class MLSMOTE(BaseResampler):
     specifies the percentage of samples to generate, which is a more practical approach for the user.
     Another change was made, due to performance. The bag of samples from which to sample is iteratively updated, removing the samples
     that are no longer minority samples. In this implementation, to make the most of the numpy and pandas libraries, the samples are
-    generated in a single step, which may lead to a performance hit in large datasets. 
+    generated in a single step. 
     """
     def __init__(self, percentage=0.5, n_neighbors=5,random_state=None):
         self.n_neighbors = n_neighbors
